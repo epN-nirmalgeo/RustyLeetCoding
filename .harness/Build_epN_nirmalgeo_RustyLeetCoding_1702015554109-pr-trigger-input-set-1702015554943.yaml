@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_epN_nirmalgeo_RustyLeetCoding_1702015554109-pr-trigger-input-set
+  identifier: Build_epN_nirmalgeo_RustyLeetCoding_1702015554109prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_epN_nirmalgeo_RustyLeetCoding_1702015554109
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
