@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_epN_nirmalgeo_RustyLeetCoding_1702015554109
+  name: Build RustyLeetCoding
+  orgIdentifier: default
+  projectIdentifier: default_project
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1702015525773
+        repoName: epN-nirmalgeo/RustyLeetCoding
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
